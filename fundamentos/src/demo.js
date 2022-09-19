@@ -1,8 +1,10 @@
+//@ts-check
+
 (()=> {
     const myCart = [];
     const products = [];
     const limit = 2;
-  
+
     async function getProducts() {
       const rta = await fetch('http://api.escuelajs.co/api/v1/products', {
         mehtod: 'GET'
@@ -22,7 +24,7 @@
         myCart.push(products[index]);
       }
     }
-  
+
     await getProducts();
     addProducto(1);
     addProducto(2);
